@@ -1,24 +1,22 @@
 //linear searching
 #include <stdio.h>
-
+#include <stdlib.h>
 int main(){
-    int arr[3], i = 0, item;
-    printf("Enter 3 elements of array: ");
-    for(int i = 0; i < 3; i++){
-        scanf("%d", &arr[i]);
-    }
+    int arr[5] = {10,20,30,40,50};
+    int i, item;
     printf("Enter the item to search: ");
     scanf("%d", &item);
-    while (i < 3)
+    while (i < 5)
     {
-        if (arr[i] == item)
-        {
-            printf("Item found at location %d", i);
-        }else{
-            printf("Item not found");
-            break;
+        if(arr[i] == item){
+            printf("Item found at %d", i);
+            exit(0);
         }
-        i++;
+        ++i;
+    } 
+    if(i > 5){
+        printf("Item not found!");
+        exit(0);
     }
     return 0;
 }

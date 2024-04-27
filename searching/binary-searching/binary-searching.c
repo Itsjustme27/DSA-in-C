@@ -3,17 +3,14 @@
 #include <stdio.h>
 
 int main(){
-    int arr[3], item;
-    int lower = 0, upper = 2, finding = 0, mid = 0;
-    printf("Enter 3 elements of array: ");
-    for(int i = 0; i < 3; i++){
-        scanf("%d", &arr[i]);
-    }
+    int arr[5] = {10,20,30,40,50}; 
+    int item;
+    int lower = 0, upper = 4, finding = 0, mid = 0;
     printf("Enter an item to search: ");    
     scanf("%d", &item);
     while (lower <= upper)
     {
-        mid = lower + upper /2;
+        mid = (lower + upper) /2;
         if (arr[mid] == item)   
         {
             finding = 1;
@@ -33,6 +30,6 @@ int main(){
     }else{
         printf("Item not found");
     }
-    
+    return 0;
     
 }
