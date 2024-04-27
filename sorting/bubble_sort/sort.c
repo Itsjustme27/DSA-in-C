@@ -10,8 +10,8 @@ int main(){
     for(int i = 0; i < num ; i++){
         scanf("%d", &arr[i]);
     }
-    for(int i = 0; i < 5; i++){
-        for(int j = i+1; j < 5; j++){
+    for(int i = 0; i < num; i++){
+        for(int j = i+1; j < num; j++){
             if(arr[i] > arr[j]){
                 temp = arr[i];
                 arr[i] = arr[j];
@@ -20,7 +20,8 @@ int main(){
         }
     }
     printf("The sorted elements are: ");
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < num; i++){
         printf("%d ", arr[i]);
     }
+    return 0;
 }
