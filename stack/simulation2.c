@@ -1,3 +1,5 @@
+//Better simulation of pop() and push()
+
 #include <stdio.h>
 #include <myheaders/boolean.h>
 #include <stdlib.h>
