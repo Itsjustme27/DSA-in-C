@@ -2,7 +2,7 @@
 
 int main()
 {
-    int temp, loc, small, num;
+    int temp, loc, least, num;
     printf("Enter a range: ");
     scanf("%d", &num);
     int arr[num];
@@ -11,11 +11,11 @@ int main()
         scanf("%d", &arr[i]);
     }
     for(int i = 0; i < num; i++){
-        small = arr[i];
+        least = arr[i];
         loc = i;
         for(int j = i+1; j < num; j++){
-            if(arr[j] < small){
-                small = arr[j];
+            if(arr[j] < least){
+                least = arr[j];
                 loc = j;
             }
         }

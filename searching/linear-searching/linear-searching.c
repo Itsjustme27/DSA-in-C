@@ -1,22 +1,38 @@
 //linear searching
+
 #include <stdio.h>
-#include <stdlib.h>
-int main(){
-    int arr[5] = {10,20,30,40,50};
-    int i, item;
-    printf("Enter the item to search: ");
-    scanf("%d", &item);
-    while (i < 5)
-    {
-        if(arr[i] == item){
-            printf("Item found at %d", i);
-            exit(0);
-        }
-        ++i;
-    } 
-    if(i > 5){
-        printf("Item not found!");
-        exit(0);
-    }
-    return 0;
+
+void linearSearch(int arr[], int range, int key);
+
+int main() {
+	int n, item;
+	printf("Enter the range of the array: ");
+	scanf("%d", &n);
+	int arr[n];
+	printf("Enter the elements in the array: ");
+	for(int i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	
+	printf("Enter an item to search: ");
+	scanf("%d", &item);
+	
+	linearSearch(arr, n, item);
+	return 0;
+}
+
+void linearSearch(int arr[], int range, int key) {
+	int flag = 0;
+	for(int i = 0; i < range; i++) {
+		if(arr[i] == key) {
+			flag = 1;
+			break;
+		}
+	}
+	
+	if(flag == 1) {
+		printf("Search found at index %d", );
+	} else {
+		printf("Search not found");
+	}
 }

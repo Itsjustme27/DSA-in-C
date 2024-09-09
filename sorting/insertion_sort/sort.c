@@ -4,7 +4,28 @@ int main(){
     int temp, num;
     printf("Enter a range: ");
     scanf("%d", &num);
-    int arr[num];
+    int arr[num];#include <stdio.h>
+
+int gcd(int a, int b);
+
+int main() {
+    int a, b;
+    printf("Enter a: ");
+    scanf("%d", &a);
+    printf("Enter b: ");
+    scanf("%d", &b);
+    int result = gcd(a, b);
+    printf("GCD of %d and %d is: %d\n", a, b, result);
+    return 0;
+}
+
+int gcd(int a, int b) {
+    if (b == 0) 
+        return a;
+    else
+        return gcd(b, a % b);
+}
+
     printf("Enter the elements of array: ");
     for(int i = 0; i < num; i++)
     {
